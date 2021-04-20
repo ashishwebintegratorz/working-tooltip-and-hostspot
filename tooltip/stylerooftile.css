@@ -1,0 +1,483 @@
+
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+  font-family: "Montserrat";
+}
+body {
+  background-color: #17bcb4;
+  width: 100%;
+}
+
+section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+.container img {
+  height: 100%;
+  width: 100%;
+}
+.all-tooltip {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.tooltip-content {
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 20px #00000020;
+  padding: 30px;
+  border-radius: 8px;
+  width: 90vw;
+  max-width: 300px;
+  opacity: 0;
+  pointer-events: none;
+  /* left: -50%; */
+  z-index: 2;
+}
+.tooltip-content .arrow {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 10px solid transparent;
+  border-bottom-color: rgb(224, 12, 4);
+  top: 0px;
+  left: 50%;
+  transform: translate(-50%, -100%) rotate(0deg);
+}
+.pin {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 80%;
+  height: 25px;
+  width: 25px;
+  background-color: rgb(224, 12, 4);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.pin:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(224, 12, 4);
+  border-radius: 50%;
+  animation: puls-effect 1s ease infinite;
+}
+.tooltip.active .tooltip-content {
+  opacity: 1;
+  pointer-events: all;
+  display: block;
+}
+
+
+
+
+
+
+
+
+/* Custom Style for tooltip-11 */
+
+.tooltip-11 .pin {
+  top: 60%;
+  left: 6%;
+  height: 15px;
+  width: 15px;
+  background-color: rgb(0, 0, 0);
+}
+.tooltip-11 .tooltip-content {
+  display: flex;
+  max-width: 300px;
+  align-items: stretch;
+  justify-content: center;
+  padding: 0;
+  background-color: white;
+}
+.tooltip-11.active .tooltip-content {
+  display: flex;
+}
+.tooltip-11 .tooltip-content .img {
+  width: 50%;
+  object-fit: cover;
+}
+.tooltip-11 .tooltip-content .content {
+  width: 50%;
+  padding: 20px;
+}
+.tooltip-11 .tooltip-content .content h1 {
+  font-size: 24px;
+}
+.tooltip-11 .tooltip-content .content p {
+  font-size: 14px;
+  margin-top: 10px;
+
+}
+
+/* custom style for tooltip-12 */
+
+.tooltip-12 .pin {
+  top: 44%;
+  left: 04%;
+  height: 15px;
+  width: 15px;
+   background-color: rgb(0, 0, 0);
+}
+.tooltip-12 .tooltip-content .content h1 {
+ 
+
+}
+.tooltip-12 .tooltip-content {
+  background-color: #fffff;
+}
+
+
+/* Custom style for tooltip-13 */
+
+.tooltip-13 .pin {
+  top: 40%;
+  left: 20%;
+  height: 15px;
+  width: 15px;
+  background-color: rgb(0, 0, 0);
+}
+.tooltip-13 .tooltip-content .content h1 {
+
+}
+.tooltip-13 .tooltip-content {
+  background-color: #fffff;
+}
+.tooltip-13 .tooltip-content button {
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 400;
+  border: none;
+  outline: none;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 20px #00000020;
+}
+/* Custom style for tooltip-4 */
+
+.tooltip-14 .pin {
+  top: 35%;
+  left: 48%;
+  height: 15px;
+  width: 15px;
+  background-color: rgb(0, 0, 0);
+}
+.tooltip-14 .tooltip-content .content h1 {
+
+}
+.tooltip-14 .tooltip-content {
+  background-color: #fffff;
+}
+
+
+
+.tooltip-15 .pin {
+  top: 55%;
+  left: 46%;
+  height: 15px;
+  width: 15px;
+  background-color: rgb(0, 0, 0);
+}
+.tooltip-15 .tooltip-content {
+  display: flex;
+  max-width: 300px;
+  align-items: stretch;
+  justify-content: center;
+  padding: 0;
+  background-color: white;
+}
+.tooltip-15.active .tooltip-content {
+   
+}
+.tooltip-15 .tooltip-content .img {
+  width: 50%;
+  object-fit: cover;
+}
+.tooltip-15 .tooltip-content .content {
+  width: 50%;
+  padding: 20px;
+}
+.tooltip-15 .tooltip-content .content h1 {
+  font-size: 24px;
+ 
+}
+.tooltip-15 .tooltip-content .content p {
+  font-size: 14px;
+}
+
+
+
+
+.tooltip-16 .pin {
+  top: 29%;
+  left: 53.5%;
+  height: 15px;
+  width: 15px;
+  background-color: rgb(0, 0, 0);
+}
+.tooltip-16 .tooltip-content {
+  display: flex;
+  max-width: 300px;;
+  align-items: stretch;
+  justify-content: center;
+  padding: 0;
+  background-color: white;
+}
+.tooltip-16.active .tooltip-content {
+ 
+}
+.tooltip-16 .tooltip-content .img {
+  width: 50%;
+  object-fit: cover;
+}
+.tooltip-16 .tooltip-content .content {
+  width: 50%;
+  padding: 20px;
+}
+.tooltip-16 .tooltip-content .content h1 {
+  font-size: 24px;
+ 
+}
+.tooltip-16 .tooltip-content .content p {
+  font-size: 14px;
+}
+
+
+
+
+
+.tooltip-17 .pin {
+  top: 49%;
+  left: 57%;
+  height: 15px;
+  width: 15px;
+  background-color: rgb(0, 0, 0);
+}
+.tooltip-17 .tooltip-content {
+  display: flex;
+  max-width: 300px;
+  align-items: stretch;
+  justify-content: center;
+  padding: 0;
+  background-color: white;
+}
+.tooltip-17.active .tooltip-content {
+ display: inline-block;
+}
+.tooltip-17 .tooltip-content .img {
+  width: 50%;
+  object-fit: cover;
+}
+.tooltip-17 .tooltip-content .content {
+  width: 50%;
+  padding: 20px;
+}
+.tooltip-17 .tooltip-content .content h1 {
+  font-size: 24px;
+ 
+}
+.tooltip-17 .tooltip-content .content p {
+  font-size: 14px;
+}
+
+
+
+
+.tooltip-18 .pin {
+  top: 32%;
+  left: 70.2%;
+  height: 15px;
+  width: 15px;
+  background-color: rgb(0, 0, 0);
+}
+.tooltip-18 .tooltip-content {
+  display: flex;
+  max-width: 300px;
+  align-items: stretch;
+  justify-content: center;
+  padding: 0;
+  background-color: white;
+}
+.tooltip-18.active .tooltip-content {
+   display: inline-block;
+}
+.tooltip-18 .tooltip-content .img {
+  width: 50%;
+  object-fit: cover;
+}
+.tooltip-18 .tooltip-content .content {
+  width: 50%;
+  padding: 20px;
+}
+.tooltip-18 .tooltip-content .content h1 {
+  font-size: 24px;
+ 
+}
+.tooltip-18 .tooltip-content .content p {
+  font-size: 14px;
+}
+
+.tooltip-19 .pin {
+  top: 53%;
+  left: 65%;
+  height: 15px;
+  width: 15px;
+  background-color: rgb(0, 0, 0);
+}
+.tooltip-19 .tooltip-content {
+  display: flex;
+  max-width: 300px;
+  align-items: stretch;
+  justify-content: center;
+  padding: 0;
+  background-color: white;
+}
+.tooltip-19.active .tooltip-content {
+  display: inline-block;
+}
+.tooltip-19 .tooltip-content .img {
+  width: 50%;
+  object-fit: cover;
+}
+.tooltip-19 .tooltip-content .content {
+  width: 50%;
+  padding: 20px;
+}
+.tooltip-19 .tooltip-content .content h1 {
+  font-size: 24px;
+ 
+}
+.tooltip-19 .tooltip-content .content p {
+  font-size: 14px;
+}
+
+
+
+
+
+.tooltip-20 .pin {
+  top: 68%;
+  left: 73.2%;
+  height: 15px;
+  width: 15px;
+  background-color: rgb(0, 0, 0);
+}
+.tooltip-20 .tooltip-content {
+  display: flex;
+  max-width: 300px;
+  align-items: stretch;
+  justify-content: center;
+  padding: 0;
+  background-color: white;
+}
+.tooltip-20.active .tooltip-content {
+ display: inline-block;
+}
+.tooltip-20 .tooltip-content .img {
+  width: 50%;
+  object-fit: cover;
+}
+.tooltip-20 .tooltip-content .content {
+  width: 50%;
+  padding: 20px;
+}
+.tooltip-20 .tooltip-content .content h1 {
+  font-size: 24px;
+
+}
+.tooltip-20 .tooltip-content .content p {
+  font-size: 14px;
+}
+.tooltip-20 .tooltip-content .content button {
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 400;
+  border: none;
+  outline: none;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 20px #00000020;
+}
+
+
+/* Puls Effect For Pins */
+
+@keyframes puls-effect {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+/* Media Query */
+
+@media (max-width: 768px) {
+  .tooltip-11 .tooltip-content {
+    flex-direction: column;
+    max-width: 300px;
+  }
+  .tooltip-11 .tooltip-content .content,
+  .tooltip-11 .tooltip-content .img {
+    width: 100%;
+  }
+}
+
+/* ********************* */
+/* This Code is for only the floating card in right bottom corner */
+/* ********************** */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  padding: 0;
+  margin: 0;
+  color: var(--color-4);
+  text-decoration: none;
+}
+/**/
